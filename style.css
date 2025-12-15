@@ -162,7 +162,7 @@ footer {
     }
     
     .navbar-brand {
-        display: none; /* Скрываем логотип rendrd. на телефонах */
+        display: none; 
     }
     
     .navbar-toggler {
@@ -178,4 +178,5 @@ footer {
         margin: 10px;
         padding: 8px 20px;
     }
+
 }
