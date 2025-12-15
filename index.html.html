@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Pokémon Website</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">rendrd.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#" onclick="showSection('logos')">Logos</a>
+                <a class="nav-link" href="#" onclick="showSection('pokemons')">Pokemons</a>
+                <a class="nav-link" href="#" onclick="showSection('heroes')">Heroes</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Секция покемонов переделана в карусель -->
+<div id="pokemons" class="section active">
+    <h1>Pokemon Cards</h1>
+    <!-- Карусель для покемонов  -->
+    <div id="pokemonCarousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+            <!-- Слайд 1 (активный) -->
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-3">
+                            <div class="card pokemon-card">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+                                <h4 style="color:white;margin-top:15px;">Pikachu</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card pokemon-card">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander">
+                                <h4 style="color:white;margin-top:15px;">Charmander</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card pokemon-card">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur">
+                                <h4 style="color:white;margin-top:15px;">Bulbasaur</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card pokemon-card">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle">
+                                <h4 style="color:white;margin-top:15px;">Squirtle</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Слайд 2 -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-3">
+                            <div class="card pokemon-card">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png" alt="Eevee">
+                                <h4 style="color:white;margin-top:15px;">Eevee</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card pokemon-card">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png" alt="Snorlax">
+                                <h4 style="color:white;margin-top:15px;">Snorlax</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card pokemon-card">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" alt="Gengar">
+                                <h4 style="color:white;margin-top:15px;">Gengar</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card pokemon-card">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png" alt="Mew">
+                                <h4 style="color:white;margin-top:15px;">Mew</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Кнопки управления каруселью  -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#pokemonCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#pokemonCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- Секция логотипов (осталась без изменений) -->
+<div id="logos" class="section">
+    <h1>Pokemon Logo</h1>
+    <div class="text-center">
+        <img id="logo" src="" alt="Pokémon Logo">
+        <div>
+            <button class="btn-logo" onclick="prevLogo()">Previous</button>
+            <button class="btn-logo" onclick="nextLogo()">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- Секция героев переделана в карусель -->
+<div id="heroes" class="section">
+    <h1>Pokemon Heroes</h1>
+    <!-- Карусель для героев  -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+            <!-- Слайд 1 (активный) -->
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-3">
+                            <div class="card hero-card">
+                                <img src="https://wallpapers.com/images/high/ash-ketchum-readyfor-battle-foiuntuuaayuhfa0.png" alt="Ash Ketchum">
+                                <h4 style="color:white;margin-top:15px;">Ash Ketchum</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card hero-card">
+                                <img src="https://wallpapers.com/images/high/misty-pokemon-character-pose-rninzx7w2ktnx365-2.png" alt="Misty">
+                                <h4 style="color:white;margin-top:15px;">Misty</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card hero-card">
+                                <img src="https://s.pngkit.com/png/small/225-2258642_brock-pokemon-png-brock-the-trainer.png" alt="Brock">
+                                <h4 style="color:white;margin-top:15px;">Brock</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card hero-card">
+                                <img src="https://www.nicepng.com/png/detail/125-1251306_jessie-pokemon.png" alt="Jessie">
+                                <h4 style="color:white;margin-top:15px;">Jessie</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Слайд 2 -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-3">
+                            <div class="card hero-card">
+                                <img src="https://archives.bulbagarden.net/media/upload/b/b2/James_BW.png" alt="James">
+                                <h4 style="color:white;margin-top:15px;">James</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Кнопки управления каруселью  -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<footer>created by clownfacke</footer>
+
+<script src="script.js"></script>
+
+<!-- Покебол -->
+<img src="https://images.icon-icons.com/851/PNG/512/Pokeball_icon-icons.com_67533.png" 
+     alt="Pokéball" 
+     class="pokeball-icon">
+
+</body>
+</html>
