@@ -36,7 +36,6 @@ function prevLogo() {
 // Инициализация первой картинки логотипа
 logoImg.src = logos[0];
 
-// ---- Инициализация каруселей Bootstrap  ----
 // Инициализация карусели покемонов
 const pokemonCarousel = new bootstrap.Carousel(document.getElementById('pokemonCarousel'), {
     wrap: true // Бесконечная прокрутка
@@ -45,4 +44,5 @@ const pokemonCarousel = new bootstrap.Carousel(document.getElementById('pokemonC
 // Инициализация карусели героев
 const heroCarousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
     wrap: true // Бесконечная прокрутка
+
 });
